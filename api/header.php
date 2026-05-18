@@ -727,7 +727,7 @@ footer {
     <img src="https://i.imgur.com/Yyo0Zul.png" alt="Atenxa" />
   </a>
   <div class="nav-right">
-    <a href="#technology" class="nav-link">Technology</a>
+    <a href="#technology" class="nav-link">Technology2</a>
     <a href="#how" class="nav-link">How It Works</a>
     <a href="/submit.php" class="nav-btn">Analyze My Video</a>
   </div>

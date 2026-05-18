@@ -10,7 +10,7 @@ from openai import OpenAI
 # --- CONFIGURATION ---
 SCOPES = ['https://www.googleapis.com/auth/drive']
 SERVICE_ACCOUNT_FILE = 'service_account.json' # Your Google Service Account credentials
-DRIVE_FOLDER_ID = 'YOUR_FOLDER_ID'
+DRIVE_FOLDER_ID = '1NQOMuv1J7P3_8pubTxQItJBPlIEl4pwd'
 CHECK_INTERVAL = 60 # Check every 60 seconds
 OPENAI_API_KEY = 'YOUR_OPENAI_API_KEY'
 client = OpenAI(api_key=OPENAI_API_KEY)

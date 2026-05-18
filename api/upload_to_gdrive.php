@@ -9,7 +9,7 @@ require_once 'vendor/autoload.php';
 
 // Configuration - Replace with your own details
 $client_secret_path = 'credentials.json';
-$folder_id = 'YOUR_GOOGLE_DRIVE_FOLDER_ID'; // The ID of the folder where videos will be saved
+$folder_id = '1NQOMuv1J7P3_8pubTxQItJBPlIEl4pwd'; // The ID of the folder where videos will be saved
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['video'])) {
     $email = $_POST['email'];

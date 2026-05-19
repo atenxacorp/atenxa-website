@@ -4,11 +4,10 @@
       "runtime": "vercel-php@0.7.3"
     }
   },
- "routes": [
+  "routes": [
     { "src": "/submit.php", "dest": "/api/submit.php" },
-   { "src": "/upload.php", "dest": "/api/upload.php" },
-    { "src": "/dashboard.php", "dest": "/api/dashboard.php" },
-    { "src": "/report.php", "dest": "/api/report.php" },
-     { "src": "/(.*)", "dest": "/index.php" }
+    { "src": "/upload.php", "dest": "/api/upload.php" },
+    { "src": "/", "dest": "/api/index.php" },
+    { "src": "/(.*)", "dest": "/api/index.php" }
   ]
 }

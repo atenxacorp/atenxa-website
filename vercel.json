@@ -5,9 +5,11 @@
     }
   },
   "routes": [
-    { "src": "/submit.php", "dest": "/api/submit.php" },
-    { "src": "/upload.php", "dest": "/api/upload.php" },
-    { "src": "/", "dest": "/api/index.php" },
-    { "src": "/(.*)", "dest": "/api/index.php" }
+    {
+      "src": "/submit.php", "dest": "/api/submit.php"
+      "src": "/upload.php", "dest": "/api/upload.php"
+      "src": "/(.*)",
+      "dest": "/api/index.php"
+    }
   ]
 }

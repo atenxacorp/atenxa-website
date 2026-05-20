@@ -337,9 +337,9 @@ if (isset($result['secure_url'])):
             One last thing: <strong>don't post that video yet. 😉</strong>
         </div>
         <div class="action-row">
-            <a href="<?php echo htmlspecialchars($videoUrl); ?>" target="_blank" class="btn-primary">
-                View Uploaded Video →
-            </a>
+          //  <a href="<?php echo htmlspecialchars($videoUrl); ?>" target="_blank" class="btn-primary">
+          //      View Uploaded Video →
+          //  </a>
             <a href="/" class="btn-secondary">
                 Back to Atenxa
             </a>

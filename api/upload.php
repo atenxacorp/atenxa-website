@@ -4,8 +4,8 @@
 // CLOUDINARY CONFIG
 // ========================
 $cloud_name = getenv('CLOUDINARY_CLOUD_NAME') ?: 'deintz8ij';
-$api_key    = getenv('CLOUDINARY_API_KEY')    ?: '692779225688919';
-$api_secret = getenv('CLOUDINARY_API_SECRET') ?: '56b6LPCx7XdpNjxwfujFcYm14DI';
+$api_key    = getenv('CLOUDINARY_API_KEY')    ?: '726455595284718';
+$api_secret = getenv('CLOUDINARY_API_SECRET') ?: 'zdjoROel3eqRLe1M76x5fafbzYI';
 
 // ========================
 // ONLY ACCEPT POST

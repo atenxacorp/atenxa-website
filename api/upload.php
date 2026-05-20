@@ -42,7 +42,6 @@ $fileName = $_FILES['video']['name'];
 $fileType = $_FILES['video']['type'];
 $fileSize = $_FILES['video']['size'];
 
-// Allowed video types
 $allowedTypes = [
     'video/mp4',
     'video/quicktime',
@@ -56,7 +55,6 @@ if (!in_array($fileType, $allowedTypes)) {
     die(showError("Invalid file type. Please upload MP4, MOV, AVI, or WEBM."));
 }
 
-// Max 60MB
 $maxSize = 60 * 1024 * 1024;
 if ($fileSize > $maxSize) {
     $sizeMB = round($fileSize / 1024 / 1024, 1);
@@ -126,6 +124,64 @@ $result = json_decode($response, true);
 if (isset($result['secure_url'])):
     $videoUrl      = $result['secure_url'];
     $videoDuration = isset($result['duration']) ? round($result['duration'], 1) : null;
+    $submittedAt   = date('Y-m-d H:i:s');
+
+    // ========================
+    // EMAIL NOTIFICATION
+    // Via Formspree -> atenxacorp@gmail.com
+    // ========================
+    $notifData = [
+        'name'         => $name,
+        'email'        => $email,
+        'platform'     => $platform,
+        'file'         => $fileName,
+        'duration'     => ($videoDuration ?? 'N/A') . 's',
+        'notes'        => $notes ?: '-',
+        'video_url'    => $videoUrl,
+        'submitted_at' => $submittedAt,
+        '_subject'     => 'New Atenxa Submission — ' . $name . ' (' . $platform . ')',
+        '_replyto'     => $email,
+    ];
+
+    $notifCh = curl_init();
+    curl_setopt($notifCh, CURLOPT_URL, 'https://formspree.io/f/mojbapey');
+    curl_setopt($notifCh, CURLOPT_POST, true);
+    curl_setopt($notifCh, CURLOPT_POSTFIELDS, http_build_query($notifData));
+    curl_setopt($notifCh, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($notifCh, CURLOPT_TIMEOUT, 15);
+    curl_setopt($notifCh, CURLOPT_HTTPHEADER, ['Accept: application/json']);
+    curl_exec($notifCh);
+    curl_close($notifCh);
+
+    // ========================
+    // LOG TO GOOGLE SHEETS
+    // Setup: buat Google Apps Script Web App
+    // lalu set GOOGLE_SCRIPT_URL di Vercel env variables
+    // ========================
+    $sheetsUrl = getenv('GOOGLE_SCRIPT_URL') ?: '';
+
+    if ($sheetsUrl) {
+        $sheetsData = json_encode([
+            'submitted_at' => $submittedAt,
+            'name'         => $name,
+            'email'        => $email,
+            'platform'     => $platform,
+            'file'         => $fileName,
+            'duration'     => $videoDuration ?? 'N/A',
+            'notes'        => $notes ?: '-',
+            'video_url'    => $videoUrl,
+        ]);
+
+        $sheetsCh = curl_init();
+        curl_setopt($sheetsCh, CURLOPT_URL, $sheetsUrl);
+        curl_setopt($sheetsCh, CURLOPT_POST, true);
+        curl_setopt($sheetsCh, CURLOPT_POSTFIELDS, $sheetsData);
+        curl_setopt($sheetsCh, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($sheetsCh, CURLOPT_TIMEOUT, 15);
+        curl_setopt($sheetsCh, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+        curl_exec($sheetsCh);
+        curl_close($sheetsCh);
+    }
 ?>
 
 <style>
@@ -148,10 +204,7 @@ if (isset($result['secure_url'])):
     padding: 42px;
 }
 
-.success-icon {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
+.success-icon { font-size: 48px; margin-bottom: 20px; }
 
 .success-title {
     font-family: 'Cabinet Grotesk', sans-serif;
@@ -194,10 +247,7 @@ if (isset($result['secure_url'])):
     margin-bottom: 4px;
 }
 
-.data-value {
-    color: #f3f4f6;
-    font-size: 15px;
-}
+.data-value { color: #f3f4f6; font-size: 15px; }
 
 .notice-box {
     background: rgba(125,211,252,0.08);
@@ -212,11 +262,7 @@ if (isset($result['secure_url'])):
 
 .notice-box strong { font-weight: 700; }
 
-.action-row {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-}
+.action-row { display: flex; gap: 12px; flex-wrap: wrap; }
 
 .btn-primary {
     background: #7dd3fc;
@@ -244,24 +290,17 @@ if (isset($result['secure_url'])):
     display: inline-block;
 }
 
-.btn-secondary:hover {
-    color: white;
-    border-color: rgba(255,255,255,0.2);
-}
+.btn-secondary:hover { color: white; border-color: rgba(255,255,255,0.2); }
 </style>
 
 <div class="success-wrap">
     <div class="success-card">
-
         <div class="success-icon">🎯</div>
-
         <h1 class="success-title">Upload Complete</h1>
-
         <p class="success-sub">
             Your video has been received by Atenxa.
             Our attention analysis pipeline is now queued for review.
         </p>
-
         <div class="data-box">
             <div class="data-row">
                 <span class="data-label">Name</span>
@@ -285,8 +324,11 @@ if (isset($result['secure_url'])):
                 <span class="data-value"><?php echo $videoDuration; ?>s</span>
             </div>
             <?php endif; ?>
+            <div class="data-row">
+                <span class="data-label">Submitted At</span>
+                <span class="data-value"><?php echo $submittedAt; ?></span>
+            </div>
         </div>
-
         <div class="notice-box">
             <strong>What happens next?</strong><br>
             Your Atenxa Attention Report — including scorecard, retention curve,
@@ -294,7 +336,6 @@ if (isset($result['secure_url'])):
             <strong><?php echo htmlspecialchars($email); ?></strong> within 24 hours.<br><br>
             One last thing: <strong>don't post that video yet. 😉</strong>
         </div>
-
         <div class="action-row">
             <a href="<?php echo htmlspecialchars($videoUrl); ?>" target="_blank" class="btn-primary">
                 View Uploaded Video →
@@ -303,66 +344,24 @@ if (isset($result['secure_url'])):
                 Back to Atenxa
             </a>
         </div>
-
     </div>
 </div>
 
 <?php
 
-// ========================
-// UPLOAD FAILED
-// ========================
 else:
     echo showError("Upload failed. Please try again.", $result);
 endif;
 
-// ========================
-// ERROR HELPER FUNCTION
-// ========================
 function showError($message, $debug = null) {
     $html = "
     <style>
-    .error-wrap {
-        min-height:100vh;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        padding:120px 24px;
-    }
-    .error-card {
-        width:100%;
-        max-width:560px;
-        background:#111114;
-        border:1px solid rgba(251,113,133,0.2);
-        border-radius:28px;
-        padding:42px;
-        text-align:center;
-    }
+    .error-wrap { min-height:100vh; display:flex; align-items:center; justify-content:center; padding:120px 24px; }
+    .error-card { width:100%; max-width:560px; background:#111114; border:1px solid rgba(251,113,133,0.2); border-radius:28px; padding:42px; text-align:center; }
     .error-icon { font-size:48px; margin-bottom:16px; }
-    .error-title {
-        font-family:'Cabinet Grotesk',sans-serif;
-        font-size:32px;
-        font-weight:800;
-        color:#fb7185;
-        margin-bottom:12px;
-        letter-spacing:-0.04em;
-    }
-    .error-msg {
-        color:#9ca3af;
-        font-size:15px;
-        line-height:1.7;
-        margin-bottom:28px;
-    }
-    .btn-back {
-        background:#7dd3fc;
-        color:#060606;
-        text-decoration:none;
-        padding:14px 28px;
-        border-radius:12px;
-        font-weight:700;
-        font-size:15px;
-        display:inline-block;
-    }
+    .error-title { font-family:'Cabinet Grotesk',sans-serif; font-size:32px; font-weight:800; color:#fb7185; margin-bottom:12px; letter-spacing:-0.04em; }
+    .error-msg { color:#9ca3af; font-size:15px; line-height:1.7; margin-bottom:28px; }
+    .btn-back { background:#7dd3fc; color:#060606; text-decoration:none; padding:14px 28px; border-radius:12px; font-weight:700; font-size:15px; display:inline-block; }
     </style>
     <div class='error-wrap'>
         <div class='error-card'>
@@ -373,7 +372,6 @@ function showError($message, $debug = null) {
         </div>
     </div>";
 
-    // Show debug in development
     if ($debug) {
         $html .= "<pre style='background:#18181c;color:#9ca3af;padding:20px;margin:20px;border-radius:12px;overflow:auto;font-size:12px;'>";
         $html .= print_r($debug, true);

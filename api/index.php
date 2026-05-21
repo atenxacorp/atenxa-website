@@ -238,5 +238,419 @@
     <div class="cta-fine">Early access users receive their first analysis free. Report delivered within 24 hours.</div>
   </div>
 </div>
+<!-- ======================== -->
+<!-- FAQ SECTION              -->
+<!-- Add this before footer   -->
+<!-- ======================== -->
 
+<section class="faq-section" id="faq">
+  <div class="faq-wrap">
+
+    <div class="faq-header">
+      <div class="faq-eyebrow">FAQ</div>
+      <h2 class="faq-title">
+        What Atenxa <em>is</em>.<br>
+        What Atenxa <em>is not</em>.
+      </h2>
+      <p class="faq-sub">
+        Atenxa introduces a new category: Attention Intelligence.
+        Here's everything you need to understand what that means.
+      </p>
+    </div>
+
+    <!-- IS / IS NOT CARDS -->
+    <div class="faq-twin">
+      <div class="faq-twin-card is">
+        <div class="twin-label is-label">Atenxa IS</div>
+        <ul class="twin-list">
+          <li>An Attention Intelligence Platform</li>
+          <li>A pre-publish behavioral analysis tool</li>
+          <li>A retention risk detector</li>
+          <li>An emotional pacing analyzer</li>
+          <li>A hook strength evaluator</li>
+          <li>A cognitive load measurer</li>
+          <li>A platform-calibrated scoring system</li>
+        </ul>
+      </div>
+      <div class="faq-twin-card isnot">
+        <div class="twin-label isnot-label">Atenxa IS NOT</div>
+        <ul class="twin-list">
+          <li>A viral growth hack</li>
+          <li>An SMO or fake engagement tool</li>
+          <li>A video editor or auto-editor</li>
+          <li>A view count booster</li>
+          <li>A bot or artificial traffic tool</li>
+          <li>A social media agency</li>
+          <li>A guarantee of virality</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FAQ ACCORDION -->
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>What is Atenxa?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Atenxa is an Attention Intelligence Platform that analyzes short-form videos before publishing — identifying retention risks, weak hooks, pacing issues, and behavioral attention drop points. Built on behavioral models, emotional mapping, and attention engineering for modern media.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Does Atenxa guarantee virality?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          No. Atenxa does not guarantee viral views. Atenxa improves the probability that viewers keep watching <em>once your content is seen</em>. Views are distributed by the algorithm. Retention is earned by your content. Atenxa helps you earn it.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>How do I know if Atenxa is working?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Success with Atenxa is not measured by view count. Look for improvements in:
+          <ul class="faq-sublist">
+            <li>Average watch duration</li>
+            <li>Retention rate (% of video watched)</li>
+            <li>Ad conversion rate</li>
+            <li>Audience engagement depth</li>
+          </ul>
+          Views are distributed by the algorithm. Retention is earned by your content. Atenxa helps you earn it.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Does Atenxa edit my video automatically?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          No. Atenxa provides analysis, attention insights, and optimization suggestions. Creators remain fully in control of editing and publishing. We show you what to fix — you decide how to fix it.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Is Atenxa an SMO or fake engagement tool?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          No. Atenxa does not use bots, fake engagement, or artificial traffic manipulation. The platform focuses entirely on behavioral attention optimization and retention analysis — helping your content perform better on its own merit.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Why does retention matter?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Modern algorithms prioritize watch behavior. Higher retention improves:
+          <ul class="faq-sublist">
+            <li>Watch duration signals to the algorithm</li>
+            <li>Ad efficiency and ROAS</li>
+            <li>Audience engagement depth</li>
+            <li>Conversion potential</li>
+          </ul>
+          TikTok, YouTube, and Instagram don't distribute the "best" video. They distribute the one most efficient at keeping people watching.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>What platforms does Atenxa support?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Currently: TikTok, Instagram Reels, and YouTube Shorts. Each platform has distinct attention behavior and cognitive tolerance — Atenxa's scoring is calibrated per platform.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Who is Atenxa built for?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Atenxa is designed for creators, advertisers, agencies, media buyers, and short-form growth teams — anyone who wants to understand how human attention interacts with their content before it goes live.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Can Atenxa help improve ad performance?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Yes. Many users run Atenxa analysis before launching paid campaigns — identifying weak attention points before spending ad budget. Stronger retention in the first 3 seconds directly impacts TikTok and Meta ad efficiency.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Is Atenxa for organic content or paid ads?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Both. Atenxa focuses on human attention behavior — which affects organic distribution and paid performance equally. The same principles that make organic content retain viewers also make paid ads convert better.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          <span>Does Atenxa replace creative testing?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          No. Atenxa helps reduce creative waste by improving videos before testing begins. Think of it as pre-flight diagnostics — you still fly the plane, but you know exactly what to check before takeoff.
+        </div>
+      </div>
+
+    </div><!-- end faq-list -->
+
+  </div>
+</section>
+
+<style>
+/* ======================== */
+/* FAQ STYLES               */
+/* ======================== */
+
+.faq-section {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 110px 24px;
+}
+
+.faq-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.faq-eyebrow {
+  color: #7dd3fc;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin-bottom: 16px;
+}
+
+.faq-title {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: clamp(36px, 5vw, 58px);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1.05;
+  margin-bottom: 18px;
+  color: #f3f4f6;
+}
+
+.faq-title em {
+  font-style: normal;
+  color: #7dd3fc;
+}
+
+.faq-sub {
+  color: #9ca3af;
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* IS / IS NOT */
+.faq-twin {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.faq-twin-card {
+  border-radius: 20px;
+  padding: 28px 32px;
+}
+
+.faq-twin-card.is {
+  background: rgba(125,211,252,0.06);
+  border: 1px solid rgba(125,211,252,0.18);
+}
+
+.faq-twin-card.isnot {
+  background: rgba(251,113,133,0.05);
+  border: 1px solid rgba(251,113,133,0.15);
+}
+
+.twin-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.is-label { color: #7dd3fc; }
+.isnot-label { color: #fb7185; }
+
+.twin-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.twin-list li {
+  font-size: 14px;
+  color: #d1d5db;
+  line-height: 1.5;
+  padding-left: 20px;
+  position: relative;
+}
+
+.faq-twin-card.is .twin-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #7dd3fc;
+  font-weight: 700;
+}
+
+.faq-twin-card.isnot .twin-list li::before {
+  content: '✕';
+  position: absolute;
+  left: 0;
+  color: #fb7185;
+  font-weight: 700;
+}
+
+/* ACCORDION */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-q {
+  width: 100%;
+  background: #111114;
+  border: none;
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+  text-align: left;
+  color: #f3f4f6;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: background .2s;
+}
+
+.faq-q:hover { background: #18181c; }
+.faq-q.active { background: #18181c; color: #7dd3fc; }
+
+.faq-icon {
+  font-size: 20px;
+  font-weight: 300;
+  color: #6b7280;
+  flex-shrink: 0;
+  transition: transform .25s, color .2s;
+  line-height: 1;
+}
+
+.faq-q.active .faq-icon {
+  transform: rotate(45deg);
+  color: #7dd3fc;
+}
+
+.faq-a {
+  display: none;
+  background: #18181c;
+  padding: 0 28px 24px;
+  color: #9ca3af;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.faq-a em { color: #7dd3fc; font-style: normal; font-weight: 500; }
+
+.faq-sublist {
+  margin-top: 12px;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.faq-sublist li {
+  padding-left: 18px;
+  position: relative;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.faq-sublist li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #7dd3fc;
+  font-size: 12px;
+}
+
+@media (max-width: 640px) {
+  .faq-twin {
+    grid-template-columns: 1fr;
+  }
+  .faq-q { padding: 18px 20px; font-size: 14px; }
+  .faq-a { padding: 0 20px 20px; }
+}
+</style>
+
+<script>
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = btn.classList.contains('active');
+
+  // Close all
+  document.querySelectorAll('.faq-q').forEach(b => {
+    b.classList.remove('active');
+    b.nextElementSibling.style.display = 'none';
+  });
+
+  // Open clicked if was closed
+  if (!isOpen) {
+    btn.classList.add('active');
+    answer.style.display = 'block';
+  }
+}
+</script>
 <?php include 'footer.php'; ?>

@@ -729,7 +729,7 @@ footer {
   <div class="nav-right">
     <a href="#technology" class="nav-link">Technology</a>
     <a href="#how" class="nav-link">How It Works</a>
-    <a href="#F A Q" class="nav-link">F A Q</a>
+    <a href="#FAQ" class="nav-link">F A Q</a>
     <a href="/submit.php" class="nav-btn">Analyze My Video</a>
   </div>
 </nav>

@@ -1,8 +1,11 @@
-<!-- FOOTER -->
+<!-- FOOTER - Replace existing footer in footer.php -->
 <footer>
-  <a href="/" class="footer-logo">
-    <img src="https://i.imgur.com/Yyo0Zul.png" alt="Atenxa" />
-  </a>
+  <div class="footer-left">
+    <a href="/" class="footer-logo">
+      <img src="https://i.imgur.com/Yyo0Zul.png" alt="Atenxa" />
+    </a>
+    <p class="footer-tagline">"Virality is temporary. Retention builds empires."</p>
+  </div>
 
   <div class="footer-social">
     <!-- X / Twitter -->
@@ -25,36 +28,117 @@
     </a>
   </div>
 
-  <div class="footer-right" style="display:flex; flex-direction:column; align-items:flex-end; gap:4px;">
-    <div class="footer-tag">"Virality is temporary. Retention builds empires."</div>
+  <div class="footer-right">
+    <div class="footer-links">
+      <a href="/privacy.php" class="footer-link">Privacy Policy</a>
+      <span class="footer-dot">·</span>
+      <a href="/terms.php" class="footer-link">Terms of Service</a>
+    </div>
     <div class="footer-copy">© 2026 Atenxa. All rights reserved.</div>
   </div>
 </footer>
 
-<script>
-const form = document.getElementById('waitlistForm');
-const success = document.getElementById('formSuccess');
-
-if (form) {
-    form.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const data = new FormData(form);
-      try {
-        const res = await fetch(form.action, {
-          method: 'POST',
-          body: data,
-          headers: { 'Accept': 'application/json' }
-        });
-        if (res.ok) {
-          form.style.display = 'none';
-          success.style.display = 'block';
-        }
-      } catch(err) {
-        console.error(err);
-      }
-    });
+<style>
+footer {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
-</script>
 
-</body>
-</html>
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-logo img {
+  height: 36px;
+  width: auto;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid rgba(125,211,252,0.15);
+}
+
+.footer-tagline {
+  color: #6b7280;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  color: #6b7280;
+  text-decoration: none;
+  transition: color .2s, border-color .2s;
+}
+
+.social-link:hover {
+  color: white;
+  border-color: rgba(255,255,255,0.18);
+}
+
+.social-link svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-link {
+  color: #6b7280;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.footer-link:hover { color: #7dd3fc; }
+
+.footer-dot {
+  color: #4b5563;
+  font-size: 13px;
+}
+
+.footer-copy {
+  color: #4b5563;
+  font-size: 12px;
+}
+
+@media (max-width: 640px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px 20px;
+  }
+  .footer-right { align-items: center; }
+  .footer-social { justify-content: center; }
+}
+</style>

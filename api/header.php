@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/favicon.ico">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Atenxa — Attention Intelligence Platform</title>
@@ -724,7 +727,7 @@ footer {
 <!-- NAV -->
 <nav>
   <a href="/" class="logo">
-    <img src="https://i.imgur.com/Yyo0Zul.png" alt="Atenxa" />
+    <img src="/logo-dark.jpg" alt="Atenxa" />
   </a>
   <div class="nav-right">
     <a href="/#technology" class="nav-link">Technology</a>

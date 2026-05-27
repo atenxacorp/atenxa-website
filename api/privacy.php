@@ -158,7 +158,7 @@
         <ul>
             <li>Process and analyze the video for attention intelligence purposes</li>
             <li>Use anonymized, non-identifiable behavioral data to improve our models</li>
-            <li>Store the video temporarily on secure third-party infrastructure (Cloudinary)</li>
+            <li>Store the video temporarily on secure third-party infrastructure </li>
         </ul>
         <p>Your video will never be shared publicly, sold, or used for any purpose outside of delivering your analysis report and improving Atenxa's models.</p>
     </div>
@@ -169,7 +169,7 @@
         <h2>5. Data Storage & Security</h2>
         <p>Your data is stored using the following services:</p>
         <ul>
-            <li><strong style="color:#f3f4f6">Cloudinary</strong> — secure video storage and delivery</li>
+            <li><strong style="color:#f3f4f6">VPS</strong> — secure video storage and delivery</li>
             <li><strong style="color:#f3f4f6">Google Sheets</strong> — submission records (admin access only)</li>
             <li><strong style="color:#f3f4f6">Formspree</strong> — email notification routing</li>
         </ul>

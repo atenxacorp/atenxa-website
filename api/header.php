@@ -727,7 +727,7 @@ footer {
 <!-- NAV -->
 <nav>
   <a href="/" class="logo">
-    <img src="/logo-dark.jpg" alt="Atenxa" />
+    <img src="/public/propic.jpg" alt="Atenxa" />
   </a>
   <div class="nav-right">
     <a href="/#technology" class="nav-link">Technology</a>

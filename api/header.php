@@ -730,6 +730,7 @@ footer {
   <img src="/propic.png" alt="Atenxa" />
   </a>
   <div class="nav-right">
+    <a href="/pricing.php" class="nav-btn">Plans</a>
     <a href="/#technology" class="nav-link">Technology</a>
     <a href="/#how" class="nav-link">How It Works</a>
     <a href="/#faq" class="nav-link">F A Q</a>

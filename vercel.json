@@ -5,6 +5,7 @@
     }
   },
   "routes": [
+    { "src": "/propic.png", "dest": "/public/propic.png" },
     { "src": "/public/(.*)", "dest": "/public/$1" },
     { "src": "/favicon.ico", "dest": "/public/favicon.ico" },
     { "src": "/submit.php", "dest": "/api/submit.php" },

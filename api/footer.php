@@ -2,7 +2,7 @@
 <footer>
   <div class="footer-left">
     <a href="/" class="footer-logo">
-      <img src="https://i.imgur.com/Yyo0Zul.png" alt="Atenxa" />
+   <img src="/propic.png" alt="Atenxa" />
     </a>
     <p class="footer-tagline">"Virality is temporary. Retention builds empires."</p>
   </div>

@@ -37,91 +37,28 @@
     color: #9ca3af;
     font-size: 17px;
     line-height: 1.8;
-    max-width: 520px;
-    margin: 0 auto 16px;
+    max-width: 560px;
+    margin: 0 auto 48px;
     text-align: center;
 }
 
-/* BETA BADGE */
-.beta-notice {
+.trial-notice {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background: rgba(251,191,36,0.08);
-    border: 1px solid rgba(251,191,36,0.2);
+    background: rgba(125,211,252,0.06);
+    border: 1px solid rgba(125,211,252,0.18);
     border-radius: 999px;
     padding: 10px 24px;
-    color: #fbbf24;
+    color: #7dd3fc;
     font-size: 13px;
     font-weight: 600;
     max-width: fit-content;
     margin: 0 auto 64px;
-}
-
-.beta-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: #fbbf24;
-    box-shadow: 0 0 10px rgba(251,191,36,0.8);
-    animation: blink 2s infinite;
-    flex-shrink: 0;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
-}
-
-/* SEATS COUNTER */
-.seats-bar {
-    max-width: 480px;
-    margin: 0 auto 64px;
-    background: #111114;
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 16px;
-    padding: 20px 24px;
     text-align: center;
 }
 
-.seats-text {
-    color: #9ca3af;
-    font-size: 14px;
-    margin-bottom: 12px;
-}
-
-.seats-text strong {
-    color: #fbbf24;
-    font-size: 18px;
-    font-family: 'Cabinet Grotesk', sans-serif;
-    letter-spacing: -0.04em;
-}
-
-.seats-track {
-    height: 6px;
-    background: #232329;
-    border-radius: 999px;
-    overflow: hidden;
-}
-
-.seats-fill {
-    height: 6px;
-    background: linear-gradient(90deg, #fbbf24, #f59e0b);
-    border-radius: 999px;
-    width: 45%;
-    transition: width 1s ease;
-}
-
-.seats-labels {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 8px;
-    font-size: 11px;
-    color: #6b7280;
-}
-
-/* PRICING GRID */
 .pricing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -219,15 +156,8 @@
     margin-left: 4px;
 }
 
-.price-original {
-    color: #4b5563;
-    font-size: 13px;
-    text-decoration: line-through;
-    margin-bottom: 4px;
-}
-
-.price-save {
-    color: #fbbf24;
+.price-trial-note {
+    color: #7dd3fc;
     font-size: 12px;
     font-weight: 600;
     margin-bottom: 28px;
@@ -269,7 +199,6 @@
     font-weight: 500;
 }
 
-/* BUTTONS */
 .btn-pricing-primary {
     display: block;
     width: 100%;
@@ -314,66 +243,132 @@
     border-color: rgba(255,255,255,0.2);
 }
 
-.btn-pricing-free {
-    display: block;
-    width: 100%;
-    background: transparent;
-    color: #7dd3fc;
-    border: 1px solid rgba(125,211,252,0.3);
-    border-radius: 12px;
-    padding: 14px 24px;
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    transition: background .2s, color .2s;
-}
-
-.btn-pricing-free:hover {
-    background: rgba(125,211,252,0.08);
-}
-
-/* FREE CARD special */
-.pricing-card.free-card {
+.trial-explainer {
     background: #0d0d10;
-    border-style: dashed;
-}
-
-/* GUARANTEE */
-.guarantee {
-    background: rgba(125,211,252,0.05);
-    border: 1px solid rgba(125,211,252,0.12);
+    border: 1px solid rgba(255,255,255,0.06);
     border-radius: 20px;
-    padding: 28px 32px;
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
+    padding: 32px;
     margin-bottom: 48px;
 }
 
-.guarantee-icon {
-    font-size: 32px;
-    flex-shrink: 0;
+.trial-explainer h3 {
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #f3f4f6;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.guarantee-text h3 {
+.trial-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.trial-step {
+    text-align: center;
+}
+
+.trial-step-num {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(125,211,252,0.1);
+    border: 1px solid rgba(125,211,252,0.25);
+    color: #7dd3fc;
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+}
+
+.trial-step p {
+    color: #9ca3af;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.trial-step strong { color: #f3f4f6; }
+
+.refund-policy {
+    background: rgba(125,211,252,0.04);
+    border: 1px solid rgba(125,211,252,0.12);
+    border-radius: 20px;
+    padding: 28px 32px;
+    margin-bottom: 48px;
+}
+
+.refund-policy h3 {
     font-family: 'Cabinet Grotesk', sans-serif;
     font-size: 18px;
     font-weight: 700;
     letter-spacing: -0.03em;
     color: #f3f4f6;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
-.guarantee-text p {
+.refund-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-bottom: 20px;
+}
+
+.refund-col-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.refund-col-title.yes { color: #7dd3fc; }
+.refund-col-title.no { color: #fb7185; }
+
+.refund-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.refund-list li {
     color: #9ca3af;
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: 13px;
+    line-height: 1.6;
+    padding-left: 18px;
+    position: relative;
 }
 
-/* FAQ MINI */
+.refund-list.yes li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #7dd3fc;
+}
+
+.refund-list.no li::before {
+    content: '✕';
+    position: absolute;
+    left: 0;
+    color: #fb7185;
+}
+
+.refund-disclaimer {
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.75;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 18px;
+}
+
 .pricing-faq {
     max-width: 680px;
     margin: 0 auto;
@@ -415,7 +410,7 @@
 @media (max-width: 640px) {
     .pricing-wrap { padding: 100px 16px 80px; }
     .pricing-grid { grid-template-columns: 1fr; }
-    .guarantee { flex-direction: column; gap: 12px; }
+    .refund-columns { grid-template-columns: 1fr; }
 }
 </style>
 
@@ -427,184 +422,193 @@
         Before the algorithm decides.
     </h1>
     <p class="pricing-sub">
-        Every video you post without an attention analysis
-        is a bet you're making blind. Stop guessing.
+        Every video you post without a BAO analysis
+        is a bet you're making blind. Stop guessing —
+        try any plan for 3 days, fully refundable.
     </p>
 
-    <!-- BETA NOTICE -->
-    <div class="beta-notice">
-        <div class="beta-dot"></div>
-        Beta Pricing — Limited Time · Standard public license starts at $69/month
+    <div class="trial-notice">
+        3-day trial on every plan · Cancel anytime in the first 3 days for a full refund
     </div>
 
-    <!-- SEATS COUNTER -->
-    <div class="seats-bar">
-        <div class="seats-text">
-            Beta Member spots remaining: <strong>11 of 20</strong>
-        </div>
-        <div class="seats-track">
-            <div class="seats-fill" style="width:45%"></div>
-        </div>
-        <div class="seats-labels">
-            <span>0</span>
-            <span>9 members joined</span>
-            <span>20</span>
-        </div>
-    </div>
+    <div class="pricing-grid" id="plans">
 
-    <!-- PRICING CARDS -->
-    <div class="pricing-grid">
-
-        <!-- FREE -->
-        <div class="pricing-card free-card">
-            <div class="card-tier">Get Started</div>
-            <div class="card-name">Free</div>
-            <div class="card-desc">Try Atenxa once. No commitment, no credit card.</div>
-
-            <div class="card-price">
-                <span class="price-amount">$0</span>
-            </div>
-            <div class="price-save" style="color:#6b7280;">One-time. Forever free for your first video.</div>
-
-            <hr class="card-divider" />
-
-            <ul class="feature-list">
-                <li><span class="feature-check">✓</span> 1 full attention analysis</li>
-                <li><span class="feature-check">✓</span> Hook strength score</li>
-                <li><span class="feature-check">✓</span> Retention curve estimate</li>
-                <li><span class="feature-check">✓</span> Emotional pacing report</li>
-                <li><span class="feature-check">✓</span> 3 improvement suggestions</li>
-                <li><span class="feature-check">✓</span> Delivered within 24 hours</li>
-            </ul>
-
-            <a href="/submit.php" class="btn-pricing-free">
-                Get My Free Analysis →
-            </a>
-        </div>
-
-        <!-- BETA STARTER -->
         <div class="pricing-card">
-            <div class="card-tier">Beta Member</div>
+            <div class="card-tier">For Individual Creators</div>
             <div class="card-name">Starter</div>
-            <div class="card-desc">For individual creators posting weekly content.</div>
+            <div class="card-desc">For creators posting weekly content who want a clear read on retention before they publish.</div>
 
-            <div class="price-original">$69/month standard</div>
             <div class="card-price">
-                <span class="price-amount">$19</span>
+                <span class="price-amount">$69</span>
                 <span class="price-period">/month</span>
             </div>
-            <div class="price-save">⚡ Beta price — locked forever for early members</div>
+            <div class="price-trial-note">⚡ 3-day trial — fully refundable</div>
 
             <hr class="card-divider" />
 
             <ul class="feature-list">
                 <li class="highlight"><span class="feature-check">✓</span> 5 video analyses / month</li>
-                <li><span class="feature-check">✓</span> Full attention scorecard</li>
-                <li><span class="feature-check">✓</span> Hook + retention + emotional pacing</li>
-                <li><span class="feature-check">✓</span> Platform-specific scoring</li>
-                <li><span class="feature-check">✓</span> Priority 24-hour delivery</li>
-                <li><span class="feature-check">✓</span> Price locked forever</li>
+                <li><span class="feature-check">✓</span> Full BAO scorecard (6 dimensions)</li>
+                <li><span class="feature-check">✓</span> Hook strength + retention curve</li>
+                <li><span class="feature-check">✓</span> Emotional density + cognitive load</li>
+                <li><span class="feature-check">✓</span> Report delivered within 36 hours</li>
             </ul>
 
-            <a href="https://gumroad.com" target="_blank" class="btn-pricing-secondary">
-                Secure Beta Pricing →
+            <a href="/submit.php" class="btn-pricing-secondary">
+                Start 3-Day Trial →
             </a>
         </div>
 
-        <!-- BETA PRO - FEATURED -->
         <div class="pricing-card featured">
             <div class="popular-badge">Most Popular</div>
-            <div class="card-tier">Beta Member</div>
-            <div class="card-name">Pro</div>
-            <div class="card-desc">For active creators and small agencies.</div>
+            <div class="card-tier">For Practitioners</div>
+            <div class="card-name">Practitioner</div>
+            <div class="card-desc">For active creators and consultants who apply BAO across multiple pieces of content every month.</div>
 
-            <div class="price-original">$69/month standard</div>
             <div class="card-price">
-                <span class="price-amount accent">$39</span>
+                <span class="price-amount accent">$129</span>
                 <span class="price-period">/month</span>
             </div>
-            <div class="price-save">⚡ Beta price — locked forever for early members</div>
+            <div class="price-trial-note">⚡ 3-day trial — fully refundable</div>
 
             <hr class="card-divider" />
 
             <ul class="feature-list">
                 <li class="highlight"><span class="feature-check">✓</span> 15 video analyses / month</li>
-                <li><span class="feature-check">✓</span> Full attention scorecard</li>
-                <li><span class="feature-check">✓</span> Hook + retention + emotional pacing</li>
-                <li><span class="feature-check">✓</span> Platform-specific scoring</li>
-                <li><span class="feature-check">✓</span> Priority 24-hour delivery</li>
-                <li><span class="feature-check">✓</span> Price locked forever</li>
-                <li class="highlight"><span class="feature-check">✓</span> Agency & multi-client use</li>
-                <li class="highlight"><span class="feature-check">✓</span> Bulk report export</li>
+                <li><span class="feature-check">✓</span> Full BAO scorecard (6 dimensions)</li>
+                <li><span class="feature-check">✓</span> Hook strength + retention curve</li>
+                <li><span class="feature-check">✓</span> Emotional density + cognitive load</li>
+                <li class="highlight"><span class="feature-check">✓</span> Full BAO breakdown per dimension</li>
+                <li class="highlight"><span class="feature-check">✓</span> Platform-fit analysis (TikTok / Reels / Shorts)</li>
+                <li><span class="feature-check">✓</span> Report delivered within 36 hours</li>
             </ul>
 
-            <a href="https://gumroad.com" target="_blank" class="btn-pricing-primary">
-                Secure Beta Pricing →
+            <a href="/submit.php" class="btn-pricing-primary">
+                Start 3-Day Trial →
+            </a>
+        </div>
+
+        <div class="pricing-card">
+            <div class="card-tier">For Studios & Agencies</div>
+            <div class="card-name">Studio</div>
+            <div class="card-desc">For agencies and teams running BAO analysis across multiple clients and campaigns.</div>
+
+            <div class="card-price">
+                <span class="price-amount">$299</span>
+                <span class="price-period">/month</span>
+            </div>
+            <div class="price-trial-note">⚡ 3-day trial — fully refundable</div>
+
+            <hr class="card-divider" />
+
+            <ul class="feature-list">
+                <li class="highlight"><span class="feature-check">✓</span> 40 video analyses / month</li>
+                <li><span class="feature-check">✓</span> Full BAO scorecard (6 dimensions)</li>
+                <li><span class="feature-check">✓</span> Full BAO breakdown per dimension</li>
+                <li><span class="feature-check">✓</span> Platform-fit analysis</li>
+                <li class="highlight"><span class="feature-check">✓</span> Multi-client tagging</li>
+                <li class="highlight"><span class="feature-check">✓</span> Bulk report export</li>
+                <li class="highlight"><span class="feature-check">✓</span> Priority delivery</li>
+            </ul>
+
+            <a href="/submit.php" class="btn-pricing-secondary">
+                Start 3-Day Trial →
             </a>
         </div>
 
     </div>
 
-    <!-- GUARANTEE -->
-    <div class="guarantee">
-        <div class="guarantee-icon">🛡️</div>
-        <div class="guarantee-text">
-            <h3>Founder's Personal Guarantee</h3>
-            <p>
-                Atenxa is currently in Beta and I'm personally subsidizing infrastructure costs
-                for our first 20 members. Your Beta price is locked forever — even when public
-                pricing launches at $69/month. If you're not satisfied with your first analysis,
-                I'll refund you personally. No questions asked.
-                <br><br>
-                <strong style="color:#f3f4f6;">— Ichal, Founder @ Atenxa</strong>
-            </p>
+    <div class="trial-explainer">
+        <h3>How the 3-day trial works</h3>
+        <div class="trial-steps">
+            <div class="trial-step">
+                <div class="trial-step-num">1</div>
+                <p><strong>Choose a plan</strong><br>and submit your first video. You're charged today.</p>
+            </div>
+            <div class="trial-step">
+                <div class="trial-step-num">2</div>
+                <p><strong>Receive your report</strong><br>within 36 hours — full BAO scorecard and breakdown.</p>
+            </div>
+            <div class="trial-step">
+                <div class="trial-step-num">3</div>
+                <p><strong>Decide within 3 days</strong><br>Keep your subscription, or cancel for a full refund.</p>
+            </div>
         </div>
     </div>
 
-    <!-- MINI FAQ -->
+    <div class="refund-policy">
+        <h3>Refund Policy — in plain terms</h3>
+
+        <div class="refund-columns">
+            <div>
+                <div class="refund-col-title yes">Refund is granted if</div>
+                <ul class="refund-list yes">
+                    <li>Your report was not delivered within 36 hours</li>
+                    <li>There was a verifiable technical error in your report</li>
+                    <li>You cancel before your first report is processed</li>
+                </ul>
+            </div>
+            <div>
+                <div class="refund-col-title no">Refund is not granted for</div>
+                <ul class="refund-list no">
+                    <li>"My video still didn't perform after applying the suggestions"</li>
+                    <li>Disagreement with a specific score</li>
+                    <li>Change of mind after reading a completed report</li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="refund-disclaimer">
+            Atenxa guarantees delivery of your analysis report within 36 hours of submission.
+            We do not guarantee specific performance outcomes — views, retention rate, or
+            conversion depend on factors outside our analysis, including execution, audience,
+            timing, and platform algorithm changes outside our control. Attention scores are
+            behavioral pattern estimates, not guarantees of platform performance.
+        </p>
+    </div>
+
     <div class="pricing-faq">
         <h3>Common Questions</h3>
 
         <div class="mini-faq-item">
-            <div class="mini-faq-q">Why is Beta pricing so much lower than public pricing?</div>
+            <div class="mini-faq-q">Why is there a paid trial instead of a free one?</div>
             <div class="mini-faq-a">
-                Atenxa runs on neural-computing attention models with real infrastructure costs.
-                For our first 20 Beta Members, I'm personally subsidizing those costs as a way
-                of saying thank you for building this product with me. Your Beta price is
-                locked in forever.
+                A short paid trial filters for people who are genuinely evaluating BAO for their
+                content — not just collecting free tools. It also means we can focus our attention
+                on a smaller number of serious users rather than high volume.
             </div>
         </div>
 
         <div class="mini-faq-item">
-            <div class="mini-faq-q">How does "locked forever" work?</div>
+            <div class="mini-faq-q">When am I charged?</div>
             <div class="mini-faq-a">
-                As long as your subscription remains active, you will never be charged more
-                than your Beta price — even as Atenxa grows and public pricing increases.
+                Immediately when you start your trial. If you cancel within 3 days of signing up,
+                you receive a full refund under the terms above.
             </div>
         </div>
 
         <div class="mini-faq-item">
             <div class="mini-faq-q">How is the analysis delivered?</div>
             <div class="mini-faq-a">
-                You submit your video via <a href="/submit.php">atenxa.com/submit.php</a>.
-                Your full attention report — including scorecard, retention curve, and
-                improvement suggestions — is delivered to your email within 24 hours.
+                You submit your video at <a href="/submit.php">atenxa.com/submit.php</a>. Your full
+                BAO report — scorecard, retention curve, and breakdown across all 6 dimensions —
+                is delivered to your email within 36 hours.
             </div>
         </div>
 
         <div class="mini-faq-item">
             <div class="mini-faq-q">What platforms does Atenxa support?</div>
             <div class="mini-faq-a">
-                TikTok, Instagram Reels, and YouTube Shorts. Each platform has distinct
-                attention behavior — your analysis is calibrated to where you're posting.
+                TikTok, Instagram Reels, and YouTube Shorts. Each platform runs on a different
+                attention pattern — your analysis is calibrated to where you're posting.
             </div>
         </div>
 
         <div class="mini-faq-item">
             <div class="mini-faq-q">Can I cancel anytime?</div>
             <div class="mini-faq-a">
-                Yes. No contracts, no lock-in. Cancel anytime directly from your
-                Gumroad account. Though once you cancel, Beta pricing cannot be reinstated.
+                Yes. No contracts, no lock-in. Cancel anytime — within the first 3 days for a full
+                refund under the policy above, or anytime after that to stop future billing.
             </div>
         </div>
 

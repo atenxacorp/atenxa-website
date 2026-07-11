@@ -1,0 +1,32 @@
+# Atenxa
+
+> Atenxa is an Attention Intelligence Platform that analyzes short-form video — frame by frame — before publishing, revealing where viewer attention collapses, where emotional pacing flatlines, and why viewers leave before the algorithm decides. It is the technology platform behind BAO (Brain Attention Optimization), a marketing discipline positioned as the cognitive layer above SEO, SMO, and GEO.
+
+Atenxa is built for creators, advertisers, agencies, media buyers, and short-form growth teams. It currently supports TikTok, Instagram Reels, and YouTube Shorts, with platform-calibrated scoring since each platform carries a distinct attention behavior signature. Users submit a video (up to 60MB); Atenxa's models analyze hook strength, emotional pacing, cognitive load, and retention risk; the user receives a full attention report with a retention curve and 3–5 specific, timestamped fixes within 24 hours. First analysis is free, no credit card required.
+
+## What Atenxa measures
+- Hook Strength — scroll-stop power of the opening seconds.
+- Cognitive Ease — mental processing load per frame; high friction triggers scroll-away.
+- Emotional Density — affective engagement and pacing across the timeline.
+- Curiosity Gap — whether open loops are created and resolved at the right time.
+- Identity Resonance — relevance recognition for the target audience/niche.
+- Retention Risk — timestamped prediction of where and when viewers are most likely to drop off.
+
+## What Atenxa is / is not
+Atenxa is a pre-publish behavioral analysis tool, retention risk detector, and platform-calibrated scoring system — grounded in observable behavioral signals (pacing, cuts, emotional transitions, subtitle density, curiosity loops), not a direct read of brain activity. Atenxa is explicitly not a viral growth hack, an SMO/fake-engagement tool, a video editor, a view-count booster, a bot, a social media agency, or a guarantee of virality. It does not edit video automatically — creators stay in control of how they act on the findings.
+
+## Core pages
+- [Home](https://atenxa.com/): Product overview, sample attention report, retention curve example, and core value proposition.
+- [Analyze My Video](https://atenxa.com/submit.php): Submission flow to upload a video and receive an attention report.
+- [Plans](https://atenxa.com/pricing.php): Pricing and plan details.
+- [Privacy Policy](https://atenxa.com/privacy.php)
+- [Terms of Service](https://atenxa.com/terms.php)
+
+## Related
+- [BAO Framework](https://baoframework.com): The underlying marketing discipline — Brain Attention Optimization — that Atenxa operationalizes.
+- [BAO Score](https://baoscore.com): Consumer-facing scoring tool built on the same attention models.
+
+## Optional
+- X (Twitter): https://x.com/atenxacorp
+- Instagram: https://instagram.com/atenxacorp
+- TikTok: https://tiktok.com/@atenxacorp
